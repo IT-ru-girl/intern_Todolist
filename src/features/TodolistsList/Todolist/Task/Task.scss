@@ -1,0 +1,36 @@
+
+
+//.checkbox {
+//  margin-right: 10px;
+//}
+//
+//.editable-span {
+//  flex-grow: 1;
+//}
+//
+.delete-button {
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.is-done {
+  text-decoration: line-through;
+}
+
+.checkbox {
+  margin-right: 8px;
+}
+
+.editable-span {
+  flex: 1;
+  height: 24px;
+  margin-right: 8px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}

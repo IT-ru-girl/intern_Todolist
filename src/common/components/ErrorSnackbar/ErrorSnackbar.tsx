@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
+import './ErrorSnackbar.scss'
 
 import { appActions } from "app/app.reducer";
 import { selectAppError } from "app/app.selectors";

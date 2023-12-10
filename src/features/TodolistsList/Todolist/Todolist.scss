@@ -1,0 +1,39 @@
+
+
+.delete-button.disabled {
+  cursor: not-allowed;
+  color: gray;
+}
+
+.button-container {
+  padding-top: 10px;
+}
+
+.filter-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #000;
+  font-size: 16px;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.filter-button.outlined {
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.filter-button.text {
+  padding: 5px 10px;
+}
+
+.filter-button:hover {
+  text-decoration: underline;
+}
+
+.filter-button:active {
+  opacity: 0.8;
+}

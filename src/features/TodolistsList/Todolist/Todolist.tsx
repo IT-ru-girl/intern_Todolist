@@ -4,7 +4,7 @@ import { EditableSpan } from "common/components";
 import { Task } from "./Task/Task";
 import { FilterValuesType, TodolistDomainType } from "features/TodolistsList/todolists.reducer";
 import { useAppDispatch } from "common/hooks/useAppDispatch";
-
+import './Todolist.scss'
 
 import { tasksThunks } from "features/TodolistsList/tasks.reducer";
 import { TaskType } from "features/TodolistsList/todolidtsApi";

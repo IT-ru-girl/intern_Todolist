@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from "react";
-import "./App.css";
+import "./App.scss";
 import { TodolistsList } from "features/TodolistsList/TodolistsList";
 
 import { useSelector } from "react-redux";
@@ -9,7 +9,7 @@ import { logoutTC } from "features/auth/auth.reducer";
 import { useAppDispatch } from "common/hooks/useAppDispatch";
 import { selectIsLoggedIn } from "features/auth/auth.selectors";
 import { selectAppStatus, selectIsInitialized } from "app/app.selectors";
-import { Login } from "features/auth/Login";
+import { Login } from "features/auth/Login/Login";
 
 
 type PropsType = {

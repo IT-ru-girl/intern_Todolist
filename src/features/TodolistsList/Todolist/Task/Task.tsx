@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useCallback } from "react";
-
+import './Task.scss'
 import { EditableSpan } from "common/components/EditableSpan/EditableSpan";
 
 import { TaskStatuses } from "common/enum/enum";
@@ -40,14 +40,7 @@ export const Task = React.memo((props: TaskPropsType) => {
     const taskClassName = isCompleted ? 'is-done' : '';
 
   return (
-    // <div key={props.task.id} className={props.task.status === TaskStatuses.Completed ? "is-done" : ""}>
-    //   <Checkbox checked={props.task.status === TaskStatuses.Completed} color="primary" onChange={onChangeHandler} />
-    //
-    //   <EditableSpan value={props.task.title} onChange={onTitleChangeHandler} />
-    //   <IconButton onClick={onClickHandler}>
-    //     <Delete />
-    //   </IconButton>
-    // </div>
+
       <div key={props.task.id} className={taskClassName}>
           <input
               type="checkbox"

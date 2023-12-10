@@ -1,6 +1,6 @@
 import React, { ChangeEvent, KeyboardEvent, useState } from "react";
 
-
+import './AddItemForm.scss'
 
 type AddItemFormPropsType = {
   addItem: (title: string) => void;

@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { loginTC } from "features/auth/auth.reducer";
 import { Navigate } from "react-router-dom";
 import { useAppDispatch } from "common/hooks/useAppDispatch";
-
+import './Login.scss'
 import { selectIsLoggedIn } from "features/auth/auth.selectors";
 
 export const Login = () => {
