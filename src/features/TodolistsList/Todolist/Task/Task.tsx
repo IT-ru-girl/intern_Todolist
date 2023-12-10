@@ -1,7 +1,6 @@
 import React, { ChangeEvent, useCallback } from "react";
-import './Task.scss'
+import "./Task.scss";
 import { EditableSpan } from "common/components/EditableSpan/EditableSpan";
-
 import { TaskStatuses } from "common/enum/enum";
 import { TaskType } from "features/TodolistsList/todolidtsApi";
 
@@ -36,26 +35,17 @@ export const Task = React.memo((props: TaskPropsType) => {
     },
     [props.task.id, props.todolistId]
   );
-    const isCompleted = props.task.status === TaskStatuses.Completed;
-    const taskClassName = isCompleted ? 'is-done' : '';
+  const isCompleted = props.task.status === TaskStatuses.Completed;
+  const taskClassName = isCompleted ? "is-done" : "";
 
   return (
+    <div key={props.task.id} className={taskClassName}>
+      <input type="checkbox" checked={isCompleted} className="checkbox" onChange={onChangeHandler} />
+      <EditableSpan value={props.task.title} onChange={onTitleChangeHandler} />
 
-      <div key={props.task.id} className={taskClassName}>
-          <input
-              type="checkbox"
-              checked={isCompleted}
-              className="checkbox"
-              onChange={onChangeHandler}
-          />
-          <EditableSpan value={props.task.title} onChange={onTitleChangeHandler} />
-
-          <button
-              className="delete-button"
-              onClick={onClickHandler}
-          >
-              Delete
-          </button>
-      </div>
+      <button className="delete-button" onClick={onClickHandler}>
+        Delete
+      </button>
+    </div>
   );
 });

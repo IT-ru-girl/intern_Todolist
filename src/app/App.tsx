@@ -4,13 +4,12 @@ import { TodolistsList } from "features/TodolistsList/TodolistsList";
 
 import { useSelector } from "react-redux";
 import { initializeAppTC } from "app/app.reducer";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import { logoutTC } from "features/auth/auth.reducer";
 import { useAppDispatch } from "common/hooks/useAppDispatch";
 import { selectIsLoggedIn } from "features/auth/auth.selectors";
 import { selectAppStatus, selectIsInitialized } from "app/app.selectors";
 import { Login } from "features/auth/Login/Login";
-
 
 type PropsType = {
   demo?: boolean;
@@ -33,13 +32,13 @@ function App({ demo = false }: PropsType) {
 
   if (!isInitialized) {
     return (
-        <div className="loading-container">
-          <div className="loading-spinner"></div>
-        </div>
+      <div className="loading-container">
+        <div className="loading-spinner"></div>
+      </div>
     );
   }
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <div className="error-snackbar">
           <div className="app-bar">
@@ -49,9 +48,9 @@ function App({ demo = false }: PropsType) {
               </button>
               <h6 className="title">News</h6>
               {isLoggedIn && (
-                  <button className="logout-button" onClick={logoutHandler}>
-                    Log out
-                  </button>
+                <button className="logout-button" onClick={logoutHandler}>
+                  Log out
+                </button>
               )}
             </div>
           </div>
@@ -64,7 +63,7 @@ function App({ demo = false }: PropsType) {
           </Routes>
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
