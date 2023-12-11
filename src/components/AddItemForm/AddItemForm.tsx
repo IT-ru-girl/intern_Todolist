@@ -1,6 +1,5 @@
 import React, { ChangeEvent, KeyboardEvent, useState } from "react";
-
-import './AddItemForm.scss'
+import "./AddItemForm.scss";
 
 type AddItemFormPropsType = {
   addItem: (title: string) => void;
@@ -8,6 +7,8 @@ type AddItemFormPropsType = {
 };
 
 export const AddItemForm = React.memo(function ({ addItem, disabled = false }: AddItemFormPropsType) {
+  console.log("AddItemForm called");
+
   let [title, setTitle] = useState("");
   let [error, setError] = useState<string | null>(null);
 
@@ -34,20 +35,20 @@ export const AddItemForm = React.memo(function ({ addItem, disabled = false }: A
   };
 
   return (
-      <div className="custom-text-field">
-        <input
-            type="text"
-            className={`text-field ${error ? 'error' : ''}`}
-            disabled={disabled}
-            value={title}
-            onChange={onChangeHandler}
-            onKeyPress={onKeyPressHandler}
-            placeholder="Title"
-        />
-        {!!error && <div className="error-text">{error}</div>}
-        <button className="add-button" onClick={addItemHandler} disabled={disabled}>
-          +
-        </button>
-      </div>
+    <div className="custom-text-field">
+      <input
+        type="text"
+        className={`text-field ${error ? "error" : ""}`}
+        disabled={disabled}
+        value={title}
+        onChange={onChangeHandler}
+        onKeyPress={onKeyPressHandler}
+        placeholder="Title"
+      />
+      {!!error && <div className="error-text">{error}</div>}
+      <button className="add-button" onClick={addItemHandler} disabled={disabled}>
+        +
+      </button>
+    </div>
   );
 });

@@ -1,8 +1,7 @@
 import React, { ChangeEvent, useCallback } from "react";
+import { EditableSpan } from "../../../../components/EditableSpan/EditableSpan";
+import { TaskStatuses, TaskType } from "../../../../api/todolists-api";
 import "./Task.scss";
-import { EditableSpan } from "common/components/EditableSpan/EditableSpan";
-import { TaskStatuses } from "common/enum/enum";
-import { TaskType } from "features/TodolistsList/todolidtsApi";
 
 type TaskPropsType = {
   task: TaskType;
@@ -42,7 +41,6 @@ export const Task = React.memo((props: TaskPropsType) => {
     <div key={props.task.id} className={taskClassName}>
       <input type="checkbox" checked={isCompleted} className="checkbox" onChange={onChangeHandler} />
       <EditableSpan value={props.task.title} onChange={onTitleChangeHandler} />
-
       <button className="delete-button" onClick={onClickHandler}>
         Delete
       </button>
