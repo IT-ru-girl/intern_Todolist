@@ -1,4 +1,6 @@
 
+$background-color_1: wheat;
+
 .todo-block {
   width: 100%;
   margin: 0 auto;
@@ -6,22 +8,19 @@
   justify-content: space-between;
   flex-wrap: wrap;
   min-height: 100vh;
-  background-color: wheat;
+  background-color: $background-color_1;
 }
-
 .todo-container {
   width: 100%;
   flex-direction: column;
   justify-content: flex-start;
 }
-
 .todos {
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 .todo-column {
   display: flex;
   justify-content: center;
@@ -29,21 +28,18 @@
   flex: 0 1 45%;
   margin-bottom: 30px;
 }
-
 .add-item-form {
-  background-color: wheat;
+  background-color: $background-color_1;
   margin: 20px;
 }
-
 @media (max-width: 768px) {
-  .todos{
+  .todos {
     justify-content: center;
   }
   .todo-column {
     flex: 0 1 75%;
   }
 }
-
 @media (max-width: 360px) {
   .todo-column {
     flex: 0 1 100%;

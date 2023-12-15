@@ -1,7 +1,11 @@
+$color_1: #ffffff;
+$color_3: white;
+$background-color_1: grey;
+$background-color_2: #ff0000;
 
 .todo {
   align-items: center;
-  background-color: grey;
+  background-color: $background-color_1;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -9,7 +13,7 @@
   padding: 10px;
   text-align: center;
   width: 80%;
-  box-shadow:  2.5px 3px black;
+  box-shadow: 2.5px 3px black;
 }
 .todo-header {
   display: flex;
@@ -20,17 +24,17 @@
 .delete-button {
   display: flex;
   align-items: center;
-  background-color: #ff0000;
-  color: #ffffff;
+  background-color: $background-color_2;
+  color: $color_1;
   padding: 5px 10px;
   border-radius: 10px;
   cursor: pointer;
 }
 .delete-button.disabled {
   cursor: not-allowed;
-  color: gray;
+  color: $background-color_1;
 }
-.delete-icon{
+.delete-icon {
   font-size: 25px;
 }
 .button-container {
@@ -41,33 +45,29 @@
   border: none;
   cursor: pointer;
   outline: none;
-  color: white;
+  color: $color_3;
   font-size: 22px;
   margin-right: 10px;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    opacity: 0.8;
+  }
 }
 .filter-button.outlined {
   border: 1px solid #000;
   border-radius: 10px;
   padding: 5px 10px;
 }
-
 .filter-button.text {
   padding: 5px 10px;
 }
-
-.filter-button:hover {
-  text-decoration: underline;
-}
-
-.filter-button:active {
-  opacity: 0.8;
-}
 @media (max-width: 768px) {
- .filter-button{
-   font-size: 20px;
- }
+  .filter-button {
+    font-size: 20px;
+  }
 }
-
 @media (max-width: 360px) {
   .todo-column {
     flex: 0 1 100%;

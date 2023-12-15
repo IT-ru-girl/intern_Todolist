@@ -1,18 +1,18 @@
+$color_1: #fff;
+$background-color_1: #f44336;
+
 .snackbar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   padding: 8px;
-  background-color: #f44336;
-  color: #fff;
+  background-color: $background-color_1;
+  color: $color_1;
   display: none;
   align-items: center;
-
-  &.open {
-    display: flex;
+  &.open { display: flex;
   }
-
   .alert {
     margin-right: 8px;
     cursor: pointer;
@@ -20,5 +20,4 @@
     &.error {
       font-weight: bold;
     }
-  }
-}
+  }}

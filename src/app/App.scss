@@ -1,9 +1,15 @@
 
-App{
+$color_1: black;
+$color_2: #333;
+$background-color_1: wheat;
+$background-color_2: transparent;
+$background-color_3: #4caf50;
+
+.app {
   box-sizing: border-box;
 }
 .header {
-  background-color: wheat;
+  background-color: $background-color_1;
 }
 .nav {
   display: flex;
@@ -14,20 +20,18 @@ App{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .title {
-  color: black;
+  color: $color_1;
   font-size: 26px;
   font-weight: bold;
-
 }
 .logout-button {
   border: none;
-  background-color: transparent;
+  background-color: $background-color_2;
   cursor: pointer;
-  color: #333;
-
+  color: $color_2;
   font-size: 25px;
 }
 .linear-progress {
   height: 4px;
-  background-color: #4caf50;
+  background-color: $background-color_3;
 }

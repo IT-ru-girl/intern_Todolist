@@ -1,4 +1,7 @@
 
+$color_1: #ffffff;
+$background-color_1: #ff0000;
+
 .task {
   display: flex;
   align-items: center;
@@ -10,26 +13,22 @@
   box-sizing: border-box;
   border: 2px solid white;
 }
-
 .task-column {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-
 .delete-button {
   font-size: 20px;
-  background-color: #ff0000;
-  color: #ffffff;
+  background-color: $background-color_1;
+  color: $color_1;
   padding: 5px 10px;
   border-radius: 10px;
   cursor: pointer;
 }
-
 .checkbox {
   margin-right: 8px;
 }
-
 .editable-span {
   flex: 1;
   height: 24px;
@@ -39,13 +38,11 @@
   border-radius: 4px;
   font-size: 14px;
 }
-
 @media (max-width: 768px) {
   .task {
     margin-bottom: 10px;
   }
 }
-
 @media (max-width: 360px) {
   .task {
     margin-bottom: 5px;
