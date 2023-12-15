@@ -1,6 +1,5 @@
 
 App{
-
   box-sizing: border-box;
 }
 .header {
@@ -31,16 +30,4 @@ App{
 .linear-progress {
   height: 4px;
   background-color: #4caf50;
-}
-
-@media (max-width: 768px) {
-  .container{
-    max-width:600px ;
-  }
-}
-@media (max-width: 360px) {
-  .container {
-    max-width: none;
-    padding: 0 10px;
-  }
 }

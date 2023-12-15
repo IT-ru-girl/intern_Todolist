@@ -81,11 +81,10 @@ export const TodolistsList: React.FC = () => {
 
   return (
     <main className="todo-block">
-      <div className="container todo-container">
+      <div className="todo-container">
         <div className="add-item-form">
           <AddItemForm addItem={addTodolist} />
         </div>
-
         <div className="todos">
           {todolists.map((tl) => {
             let allTodolistTasks = tasks[tl.id];

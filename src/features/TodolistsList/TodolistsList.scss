@@ -4,19 +4,20 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
   flex-wrap: wrap;
   min-height: 100vh;
   background-color: wheat;
 }
 
 .todo-container {
-
+  width: 100%;
   flex-direction: column;
   justify-content: flex-start;
 }
 
 .todos {
+  border: 2px solid red;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -27,11 +28,12 @@
   display: flex;
   justify-content: center;
   padding: 0 15px;
-  flex: 0 1 25%;
+  flex: 0 1 45%;
   margin-bottom: 30px;
 }
 
 .add-item-form {
+  background-color: wheat;
   margin: 20px;
 }
 

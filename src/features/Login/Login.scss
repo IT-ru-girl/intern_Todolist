@@ -1,6 +1,9 @@
 .login-form {
+  min-height: 100vh;
+  background-color: wheat;
   display: flex;
   justify-content: center;
+  font-size: 24px;
 }
 
 .form-label {
@@ -16,7 +19,6 @@
 .text-field {
   width: 100%;
   padding: 8px;
-
 }
 
 .error {
@@ -30,19 +32,26 @@
 
 .form-control-label {
   display: flex;
-  //align-items: center;
-  //margin-bottom: 16px;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
 .checkbox {
   margin-right: 8px;
-  align-items: flex-start ;
+  align-items: flex-start;
+}
+
+.text {
+  margin: 10px 0;
 }
 
 .login-button {
   padding: 8px 16px;
-  background-color: blue;
+  background-color: dimgrey;
+  border-radius: 10px;
   border: none;
   color: white;
   cursor: pointer;
+  font-size: 24px;
 }
+
