@@ -16,7 +16,7 @@
 .text-field {
   width: 100%;
   padding: 8px;
-  margin-bottom: 16px;
+
 }
 
 .error {
@@ -30,12 +30,13 @@
 
 .form-control-label {
   display: flex;
-  align-items: center;
-  margin-bottom: 16px;
+  //align-items: center;
+  //margin-bottom: 16px;
 }
 
 .checkbox {
   margin-right: 8px;
+  align-items: flex-start ;
 }
 
 .login-button {

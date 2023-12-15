@@ -15,6 +15,8 @@ import { AddItemForm } from "../../components/AddItemForm/AddItemForm";
 import { Todolist } from "./Todolist/Todolist";
 import { Navigate } from "react-router-dom";
 import "./TodolistsList.scss";
+import "../../common/styles/container.scss";
+import "../../app/App.scss";
 
 export const TodolistsList: React.FC = () => {
   const todolists = useAppSelector<Array<TodolistDomainType>>((state) => state.todolists);
@@ -78,34 +80,33 @@ export const TodolistsList: React.FC = () => {
   }
 
   return (
-    <>
-      <div className="container">
+    <main className="todo-block">
+      <div className="container todo-container">
         <div className="add-item-form">
           <AddItemForm addItem={addTodolist} />
         </div>
-        <div className="todolists-container">
+
+        <div className="todos">
           {todolists.map((tl) => {
             let allTodolistTasks = tasks[tl.id];
             return (
-              <div className="todolist-item" key={tl.id}>
-                <div className="paper">
-                  <Todolist
-                    todolist={tl}
-                    tasks={allTodolistTasks}
-                    removeTask={removeTask}
-                    changeFilter={changeFilter}
-                    addTask={addTask}
-                    changeTaskStatus={changeStatus}
-                    removeTodolist={removeTodolist}
-                    changeTaskTitle={changeTaskTitle}
-                    changeTodolistTitle={changeTodolistTitle}
-                  />
-                </div>
+              <div className="todo-column" key={tl.id}>
+                <Todolist
+                  todolist={tl}
+                  tasks={allTodolistTasks}
+                  removeTask={removeTask}
+                  changeFilter={changeFilter}
+                  addTask={addTask}
+                  changeTaskStatus={changeStatus}
+                  removeTodolist={removeTodolist}
+                  changeTaskTitle={changeTaskTitle}
+                  changeTodolistTitle={changeTodolistTitle}
+                />
               </div>
             );
           })}
         </div>
       </div>
-    </>
+    </main>
   );
 };

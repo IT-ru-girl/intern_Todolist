@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useState } from "react";
+import "./EditableSpan.scss";
 
 type EditableSpanPropsType = {
   value: string;
@@ -23,8 +24,10 @@ export const EditableSpan = React.memo(function (props: EditableSpanPropsType) {
   };
 
   return editMode ? (
-    <input value={title} onChange={changeTitle} autoFocus onBlur={activateViewMode} />
+    <input className="editable-text" value={title} onChange={changeTitle} autoFocus onBlur={activateViewMode} />
   ) : (
-    <span onDoubleClick={activateEditMode}>{props.value}</span>
+    <span className="editable-value" onDoubleClick={activateEditMode}>
+      {props.value}
+    </span>
   );
 });

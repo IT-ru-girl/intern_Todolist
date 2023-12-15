@@ -36,19 +36,21 @@ export const AddItemForm = React.memo(function ({ addItem, disabled = false }: A
 
   return (
     <div className="custom-text-field">
-      <input
-        type="text"
-        className={`text-field ${error ? "error" : ""}`}
-        disabled={disabled}
-        value={title}
-        onChange={onChangeHandler}
-        onKeyPress={onKeyPressHandler}
-        placeholder="Title"
-      />
-      {!!error && <div className="error-text">{error}</div>}
-      <button className="add-button" onClick={addItemHandler} disabled={disabled}>
-        +
-      </button>
+      <div className="field-item">
+        <input
+          type="text"
+          className={`text-field ${error ? "error" : ""}`}
+          disabled={disabled}
+          value={title}
+          onChange={onChangeHandler}
+          onKeyPress={onKeyPressHandler}
+          placeholder="Title"
+        />
+        {!!error && <div className="error-text">{error}</div>}
+        <button className="add-button" onClick={addItemHandler} disabled={disabled}>
+          +
+        </button>
+      </div>
     </div>
   );
 });

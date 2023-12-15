@@ -1,64 +1,46 @@
 
-.App {
-  background-color: #f1f1f1;
-  height: 100%;
-  margin-top: 50px;
-  padding: 20px;
-}
+App{
 
-.error-snackbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #f44336;
-  color: #fff;
-  padding: 10px;
+  box-sizing: border-box;
 }
-
-.app-bar {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.header {
+  background-color: wheat;
 }
-
-.toolbar {
+.nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 10px;
+  border: 6px solid red;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.menu-button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.menu-icon {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background-color: #333;
-  margin-bottom: 4px;
-}
-
 .title {
-  font-size: 16px;
+  color: black;
+  font-size: 26px;
   font-weight: bold;
-  margin: 0;
-}
 
+}
 .logout-button {
   border: none;
   background-color: transparent;
   cursor: pointer;
   color: #333;
-  font-weight: bold;
+
+  font-size: 25px;
 }
-
-
 .linear-progress {
   height: 4px;
   background-color: #4caf50;
 }
 
+@media (max-width: 768px) {
+  .container{
+    max-width:600px ;
+  }
+}
+@media (max-width: 360px) {
+  .container {
+    max-width: none;
+    padding: 0 10px;
+  }
+}

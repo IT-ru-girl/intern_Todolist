@@ -1,0 +1,18 @@
+.editable-text {
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+.editable-value {
+  font-size: 24px;
+  word-break: break-all;
+  padding: 0 10px;
+}
+
+
+@media (max-width: 360px) {
+  .editable-value {
+    font-size: 26px;
+  }
+}

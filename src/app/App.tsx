@@ -31,28 +31,28 @@ function App() {
 
   return (
     <div className="App">
-      <div className="error-snackbar">
-        <div className="app-bar">
-          <div className="toolbar">
-            <button className="menu-button" aria-label="menu">
-              <span className="menu-icon"></span>
+      {/*<div className="container">*/}
+      <div className="header">
+        <div className="nav">
+          {/*<button className="menu-button" aria-label="menu">*/}
+          {/*  <span className="menu-icon"></span>*/}
+          {/*</button>*/}
+          <h1 className="title">TODOLIST</h1>
+          {isLoggedIn && (
+            <button className="logout-button" onClick={onClickHandler}>
+              Log out
             </button>
-            <h6 className="title">News</h6>
-            {isLoggedIn && (
-              <button className="logout-button" onClick={onClickHandler}>
-                Log out
-              </button>
-            )}
-          </div>
+          )}
         </div>
-        {status === "loading" && <div className="linear-progress"></div>}
       </div>
+      {status === "loading" && <div className="linear-progress"></div>}
       <div>
         <Routes>
           <Route path={"/"} element={<TodolistsList />} />
           <Route path={"/login"} element={<Login />} />
         </Routes>
       </div>
+      {/*</div>*/}
     </div>
   );
 }

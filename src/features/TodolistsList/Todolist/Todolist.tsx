@@ -70,8 +70,8 @@ export const Todolist = React.memo(function ({ ...props }: PropsType) {
   }
 
   return (
-    <div>
-      <h3>
+    <div className="todo">
+      <h3 className="todo-header">
         <EditableSpan value={props.todolist.title} onChange={changeTodolistTitle} />
         <button
           className={`delete-button${props.todolist.entityStatus === "loading" ? " disabled" : ""}`}
@@ -82,17 +82,21 @@ export const Todolist = React.memo(function ({ ...props }: PropsType) {
         </button>
       </h3>
       <AddItemForm addItem={addTask} disabled={props.todolist.entityStatus === "loading"} />
-      <div>
-        {tasksForTodolist.map((t) => (
-          <Task
-            key={t.id}
-            task={t}
-            todolistId={props.todolist.id}
-            removeTask={props.removeTask}
-            changeTaskTitle={props.changeTaskTitle}
-            changeTaskStatus={props.changeTaskStatus}
-          />
-        ))}
+      <div className="task-column">
+        {tasksForTodolist.map((t) => {
+          return (
+            <div>
+              <Task
+                key={t.id}
+                task={t}
+                todolistId={props.todolist.id}
+                removeTask={props.removeTask}
+                changeTaskTitle={props.changeTaskTitle}
+                changeTaskStatus={props.changeTaskStatus}
+              />
+            </div>
+          );
+        })}
       </div>
       <div className="button-container" style={{ paddingTop: "10px" }}>
         <button

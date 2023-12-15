@@ -1,46 +1,45 @@
-.container {
-  padding: 20px;
 
+.todo-block {
+  min-height: 100vh;
+  background-color: wheat;
+}
+
+.todo-container {
+
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.todos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.todo-column {
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+  flex: 0 1 25%;
+  margin-bottom: 30px;
 }
 
 .add-item-form {
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
-.todolists-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.todolist-item {
-  .paper {
-    padding: 10px;
+@media (max-width: 768px) {
+  .todos{
+    justify-content: center;
+  }
+  .todo-column {
+    flex: 0 1 75%;
   }
 }
 
-
-//.loading-container {
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//  height: 100vh;
-//}
-//
-//.loading-spinner {
-//  border: 4px solid #f3f3f3;
-//  border-top: 4px solid #3498db;
-//  border-radius: 50%;
-//  width: 30px;
-//  height: 30px;
-//  animation: spin 1s linear infinite;
-//}
-//
-//@keyframes spin {
-//  0% {
-//    transform: rotate(0deg);
-//  }
-//  100% {
-//    transform: rotate(360deg);
-//  }
-//}
+@media (max-width: 360px) {
+  .todo-column {
+    flex: 0 1 100%;
+  }
+}
