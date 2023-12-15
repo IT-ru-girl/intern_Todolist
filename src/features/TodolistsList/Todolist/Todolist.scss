@@ -11,15 +11,12 @@
   width: 80%;
   box-shadow:  2.5px 3px black;
 }
-
-
 .todo-header {
   display: flex;
   align-items: center;
   font-size: 22px;
   font-weight: bold;
 }
-
 .delete-button {
   display: flex;
   align-items: center;
@@ -39,7 +36,6 @@
 .button-container {
   padding-top: 10px;
 }
-
 .filter-button {
   background: none;
   border: none;
@@ -49,7 +45,6 @@
   font-size: 22px;
   margin-right: 10px;
 }
-
 .filter-button.outlined {
   border: 1px solid #000;
   border-radius: 10px;

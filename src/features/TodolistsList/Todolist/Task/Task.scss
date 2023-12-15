@@ -10,14 +10,15 @@
   box-sizing: border-box;
   border: 2px solid white;
 }
-.task-column{
+
+.task-column {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 .delete-button {
-font-size: 20px;
+  font-size: 20px;
   background-color: #ff0000;
   color: #ffffff;
   padding: 5px 10px;
@@ -28,6 +29,7 @@ font-size: 20px;
 .checkbox {
   margin-right: 8px;
 }
+
 .editable-span {
   flex: 1;
   height: 24px;
@@ -37,14 +39,15 @@ font-size: 20px;
   border-radius: 4px;
   font-size: 14px;
 }
+
 @media (max-width: 768px) {
- .task{
-   margin-bottom: 10px;
- }
+  .task {
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 360px) {
-  .task{
+  .task {
     margin-bottom: 5px;
   }
 }
