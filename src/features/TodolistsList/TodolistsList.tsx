@@ -15,7 +15,7 @@ import { AddItemForm } from "../../components/AddItemForm/AddItemForm";
 import { Todolist } from "./Todolist/Todolist";
 import { Navigate } from "react-router-dom";
 import "./TodolistsList.scss";
-import "../../common/styles/container.scss";
+
 import "../../app/App.scss";
 
 export const TodolistsList: React.FC = () => {
