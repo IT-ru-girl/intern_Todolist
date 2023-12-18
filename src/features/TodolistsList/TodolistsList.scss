@@ -8,18 +8,15 @@ $background-color_1: wheat;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  border: 2px solid red;
   min-height: 100vh;
   background-color: $background-color_1;
 }
 .todo-container {
-border: 2px solid green;
   width: 100%;
   flex-direction: column;
   justify-content: flex-start;
 }
 .todos {
-  border: 3px solid yellow;
   width: 100%;
   display: flex;
   justify-content: space-between;
