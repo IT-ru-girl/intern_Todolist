@@ -78,7 +78,6 @@ export const todolistsAPI = {
   },
 };
 
-// types
 type UserType = {
   id: number;
   email: string;
@@ -134,7 +133,7 @@ export type UpdateTaskModelType = {
   deadline: string;
 };
 type GetTasksResponse = {
-  error: string | null
-  totalCount: number
-  items: TaskType[]
-}
+  error: string | null;
+  totalCount: number;
+  items: TaskType[];
+};

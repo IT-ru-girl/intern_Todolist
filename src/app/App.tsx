@@ -31,12 +31,8 @@ function App() {
 
   return (
     <div className="app">
-      {/*<div className="container">*/}
       <div className="header">
         <div className="nav">
-          {/*<button className="menu-button" aria-label="menu">*/}
-          {/*  <span className="menu-icon"></span>*/}
-          {/*</button>*/}
           <h1 className="title">TODOLIST</h1>
           {isLoggedIn && (
             <button className="logout-button" onClick={onClickHandler}>
@@ -52,7 +48,6 @@ function App() {
           <Route path={"/login"} element={<Login />} />
         </Routes>
       </div>
-      {/*</div>*/}
     </div>
   );
 }

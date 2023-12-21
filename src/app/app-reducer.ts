@@ -21,9 +21,7 @@ export const appReducer = (state: InitialStateType = initialState, action: Actio
 export type RequestStatusType = "idle" | "loading" | "succeeded" | "failed";
 export type InitialStateType = {
   isInitialized: boolean;
-  // происходит ли сейчас взаимодействие с сервером
   status: RequestStatusType;
-  // если ошибка какая-то глобальная произойдёт - мы запишем текст ошибки сюда
   error: string | null;
 };
 

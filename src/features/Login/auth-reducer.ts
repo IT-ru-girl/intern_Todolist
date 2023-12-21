@@ -31,7 +31,6 @@ export const setIsLoggedInAC = (value: boolean) => ({ type: "login/SET-IS-LOGGED
 
 export const loginTC = (data: LoginType) => async (dispatch: Dispatch<ActionsType>) => {
   dispatch(setAppStatusAC("loading"));
-
   try {
     const res = await AuthAPI.login(data);
     if (res.data.resultCode === 0) {
@@ -47,7 +46,6 @@ export const loginTC = (data: LoginType) => async (dispatch: Dispatch<ActionsTyp
 
 export const meTC = () => async (dispatch: Dispatch) => {
   dispatch(setAppStatusAC("loading"));
-
   try {
     const res = await AuthAPI.me();
     if (res.data.resultCode === 0) {
@@ -65,7 +63,6 @@ export const meTC = () => async (dispatch: Dispatch) => {
 
 export const logOutTC = () => async (dispatch: Dispatch) => {
   dispatch(setAppStatusAC("loading"));
-
   try {
     const res = await AuthAPI.logOut();
     if (res.data.resultCode === 0) {
